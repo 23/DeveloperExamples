@@ -5,4 +5,8 @@ As described in the <a href="http://community.23video.com/help/Developers">devel
 
 The examples listed in this project are meant to illustrate key features in the platform such as how to utitlize the platform APIs or how to integrate data and features with 3rd-party sites. 
 
-Each folder contains a specific code and usage example, and in each folder you'll find further information on the exact purpose of the example.
+<h1>Developer Examples for 23 Video and Visualplatform</h1>
+Each folder contains a specific code and usage example, and in each folder you'll find further information on the exact purpose of the example:
+
+<a href="/23/DeveloperExamples/tree/master/VideoCarousel/">Video Carousel</a>: Import data from a 23 Video site and use it to display a scrollable list of thumbnails.
+<a href="/23/DeveloperExamples/tree/master/APIWrappers/">API Wrapper</a>: Command-line implementation of <a href="http://community.23video.com/help/Developer_API">the XML API</a> in different programming languages (such as Tcl and PHP).
