@@ -1,6 +1,6 @@
 <h1>Video Carousel</h1>
 
-This code was originally implemented for <a href="http://www.syngforhaiti.dk">syngforhaiti.dk</a>, a Danish video site raising money of the victim of the Haiti earthquake in January 2010. The site displays a video element and a photo element -- both importing content via <a href="http://community.23video.com/help/Developer_JS">the Visualplatform JavaScript/JSON API</a> and displaying thumbnails as they are imported. (<a href="/23/DeveloperExamples/blob/master/VideoCarousel/README.png">See screenshot</a>)
+This code was originally implemented for <a href="http://www.syngforhaiti.dk">syngforhaiti.dk</a>, a Danish video site raising money of the victim of the Haiti earthquake in January 2010. The site displays a video element and a photo element -- both importing content via <a href="http://community.23video.com/help/Developer_JS">the Visualplatform JavaScript/JSON API</a> and displaying thumbnails as they are imported. (<a href="/23/DeveloperExamples/blob/master/VideoCarousel/screenshot-carousel.png">See screenshot</a>)
 
 With regard to 23 Video and Visualplatform, this example demonstrates how to...
 <ul>
