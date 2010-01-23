@@ -11,12 +11,12 @@ With regard to 23 Video and Visualplatform, this example demonstrates how to...
 
 
 <h2>Code: Displaying carousel and opening videos in a lightbox</h2>
-    &lt;link rel="stylesheet" type="text/css" href="videocarousel.css" /&gt;
+    <link rel="stylesheet" type="text/css" href="videocarousel.css" />
 
-    &lt;div id="videoBadge"&gt;&lt;/div&gt;
-    &lt;div style="clear:left"&gt;&lt;/div&gt;
+    <div id="videoBadge"></div>
+    <div style="clear:left"></div>
       
-    &lt;script&gt;
+    <script>
       var videobadge = {
         containerName:'videoBadge',
         domain:'www.syngforhaiti.dk',
@@ -26,24 +26,24 @@ With regard to 23 Video and Visualplatform, this example demonstrates how to...
         player_height:'360',
         params:[]
       };
-    &lt;/script&gt;
-    &lt;script src="videocarousel.js"&gt;&lt;/script&gt;
+    </script>
+    <script src="videocarousel.js"></script>
 
 You can limit the imported items by modifying the <tt>params</tt> property. For example, to limit to everything tagged "music" in the channel with id "12345":
     params:['tag', 'music', 'album_id', '12345']
 
 <h2>Code: Displaying carousel and open up the 23 Video page on click</h2>
-    &lt;link rel="stylesheet" type="text/css" href="videocarousel.css" /&gt;
+    <link rel="stylesheet" type="text/css" href="videocarousel.css" />
 
-    &lt;div id="videoBadge"&gt;&lt;/div&gt;
-    &lt;div style="clear:left"&gt;&lt;/div&gt;
+    <div id="videoBadge"></div>
+    <div style="clear:left"></div>
       
-    &lt;script&gt;
+    <script>
       var videobadge = {
         containerName:'videoBadge',
         domain:'www.syngforhaiti.dk',
         size:300,
         onclick:function(o){location.href='http://www.syngforhaiti.dk' + this.one;}
       };
-    &lt;/script&gt;
-    &lt;script src="videocarousel.js"&gt;&lt;/script&gt;
+    </script>
+    <script src="videocarousel.js"></script>
