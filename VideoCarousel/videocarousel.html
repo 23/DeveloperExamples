@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>23 Developer Example: Video Carousel</title>
+    <link rel="stylesheet" type="text/css" href="../lib/base.css" />
+    <link rel="stylesheet" type="text/css" href="videocarousel.css" />
+  </head>
+  <body>
+    <div id="frame">
+      <div id="videofeature" class="feature">
+        <h1>Video</h1>
+        <div id="videoBadge"></div>
+        <div style="clear:left"></div>
+      </div>
+      
+      <script>
+        var videobadge = {
+        containerName:'videoBadge',
+        domain:'www.syngforhaiti.dk',
+        size:300,
+        onclick:function(o){location.href=this.one;}
+        };
+      </script>
+      <script src="videocarousel.js"></script> 
+      
+      <div id="imagefeature" class="feature">
+        <h1>Billeder</h1>
+        <div id="imageBadge"></div>
+        <div style="clear:left"></div>
+      </div>
+      
+      <script>
+        var videobadge = {
+        containerName:'imageBadge',
+        domain:'billeder.syngforhaiti.dk',
+        size:300,
+        player_id:'',
+        player_width:'640',
+        player_height:'360',
+        params:[]
+        };
+      </script>
+      <script src="videocarousel.js"></script> 
+    </div>
+  </body>
+</html>
