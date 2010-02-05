@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>23 Developer Example: Playlist</title>
+    <link rel="stylesheet" type="text/css" href="../lib/base.css" />
+    <link rel="stylesheet" type="text/css" href="playlist.css" />
+  </head>
+  <body>
+    <div id="frame">
+
+      <div id="playlist" class="playlist">
+        <div class="playlist-tabs">
+          <a class="playlist-tab" onclick="$$('.playlist-new').each(Element.show); $$('.playlist-popular').each(Element.hide);">Nyeste</a>
+          <a class="playlist-tab" onclick="$$('.playlist-popular').each(Element.show); $$('.playlist-new').each(Element.hide);">Popul&aelig;re</a>
+        </div>
+        <div id="playlistContent" class="playlist-content">
+      </div>
+
+      <div id="embedContainer"></div>
+
+      <script>
+        var playlistConfig = {
+          playlistContainer:'playlistContent',
+          embedContainer:'embedContainer',
+          domain:'midspar.23video.com',
+          size:20,
+          truncate_title:30,
+          player_id:'',
+          player_width:'640',
+          player_height:'360',
+          params:[]
+        };
+      </script>
+      <script src="playlist.js"></script> 
+    </div>
+  </body>
+</html>
