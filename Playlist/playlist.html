@@ -7,12 +7,20 @@
   <body>
     <div id="frame">
 
+      <script>
+        function tabClick(o, className) {
+          $$('.playlist-tab-selected').each(function(o){o.removeClassName('playlist-tab-selected');}); 
+          $(o).addClassName('playlist-tab-selected'); 
+          $$('.playlist-group').each(Element.hide);
+          $$('.' +className).each(function(o){o.setStyle({display:'block'});}); 
+        }
+      </script>
       <div id="playlist" class="playlist">
         <div class="playlist-tabs">
-          <a class="playlist-tab" onclick="$$('.playlist-new').each(Element.show); $$('.playlist-popular').each(Element.hide);">Nyeste</a>
-          <a class="playlist-tab" onclick="$$('.playlist-popular').each(Element.show); $$('.playlist-new').each(Element.hide);">Popul&aelig;re</a>
+          <a class="playlist-tab playlist-tab-selected" onclick="tabClick(this, 'playlist-new');">Nyeste</a>
+          <a class="playlist-tab"  onclick="tabClick(this, 'playlist-popular');">Popul&aelig;re</a>
         </div>
-        <div id="playlistContent" class="playlist-content">
+        <div id="playlistContent" class="playlist-content"></div>
       </div>
 
       <div id="embedContainer"></div>
@@ -23,11 +31,11 @@
           embedContainer:'embedContainer',
           domain:'midspar.23video.com',
           size:20,
-          truncate_title:30,
+          truncate_title:50,
           player_id:'',
           player_width:'640',
           player_height:'360',
-          params:[]
+          params:['album_id', 548022]
         };
       </script>
       <script src="playlist.js"></script> 

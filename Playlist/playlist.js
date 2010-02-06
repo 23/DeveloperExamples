@@ -27,7 +27,7 @@ function buildVideoPlaylist(o, className, config) {
     var playlistContainer = document.getElementById(playlistConfig.playlistContainer);
     var embedContainer = document.getElementById(playlistConfig.embedContainer);
 
-    var group = new Element('div', {'className':className});
+    var group = new Element('div').addClassName(className).addClassName('playlist-group');
     playlistContainer.appendChild(group);
 
     for(var i=0; i<o.photos.length; i++) {
@@ -36,6 +36,8 @@ function buildVideoPlaylist(o, className, config) {
         // The item itself
         var item = new Element('a', {className:'playlist-item', href:'#', rel:video.photo_id});
         item.observe('click', function(e){
+            $$('.playlist-item-selected').each(function(o){o.removeClassName('playlist-item-selected');});
+            $(this).addClassName('playlist-item-selected');
             embedContainer.innerHTML = getEmbed(config, 'photo_id', this.getAttribute('rel'));
             Event.stop(e);
           });
@@ -48,13 +50,19 @@ function buildVideoPlaylist(o, className, config) {
         item.appendChild(thumb);
 
         // Title
-        var title = document.createElement('div', {'className': 'playlist-title'});
+        var title = new Element('div', {'className': 'playlist-title'});
         if (video.content_text.length>config.truncate_title) {
             title.innerHTML = video.content_text.substring(0,config.truncate_title) + '...';
         } else {
             title.innerHTML = video.content_text;
         }
         item.appendChild(title);
+
+        // Display first item on the list in the embed container
+        if (!embedContainer.innerHTML) {
+          item.addClassName('playlist-item-selected');
+          embedContainer.innerHTML = getEmbed(config, 'photo_id', video.photo_id);
+        }
     }
 }
 function buildVideoPlaylistNew(o, config) {
